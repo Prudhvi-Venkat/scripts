@@ -107,7 +107,7 @@ for year in range(2002,2024):
         # print(vendor_data)
         sanitized_vendor = re.sub(r'[\\/:*?"<>|]', "_", vendor)
         reports_dir = "reports/"
-        vendor_folder = os.path.join(extracted_json_files, sanitized_vendor)
+        vendor_folder = os.path.join(reports_dir, sanitized_vendor)
         os.makedirs(vendor_folder, exist_ok=True)
 
         for product, data in products.items():
